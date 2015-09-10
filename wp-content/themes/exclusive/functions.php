@@ -7,7 +7,7 @@
 require_once(trailingslashit( get_template_directory() ). 'admin/main_admin_controler.php');
 require_once(trailingslashit( get_template_directory() ). 'front_end/front_end_functions.php');
 
-
+add_action('admin_bar_menu', 'remove_admin_bar_menu', 100);
 
 function exclusive_setup() {
 
@@ -66,7 +66,10 @@ function exclusive_setup() {
 	}
 	
 }
-
+function remove_admin_bar_menu($wp_admin_bar)
+{
+    $wp_admin_bar->remove_menu('wp-logo');
+}
 add_action( 'after_setup_theme', 'exclusive_setup' );
 
 function exclusive_header_style(){
