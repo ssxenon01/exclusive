@@ -37,7 +37,7 @@ exclusive_update_page_layout_meta_settings();
 				if(comments_open())
 				{	wp_reset_query(); ?>
 					<div class="comments-template">
-						<?php echo comments_template();	?>
+						<?php //echo comments_template();	?>
 					</div>
 			<?php
 				}		

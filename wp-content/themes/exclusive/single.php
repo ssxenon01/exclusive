@@ -56,7 +56,7 @@ foreach ($exclusive_general_settings_page->options_generalsettings as $value) {
 					wp_reset_query();
 					?>
 			       <div class="comments-template">
-				      <?php echo comments_template(); ?>
+				      <?php //echo comments_template(); ?>
 			       </div>	
            <?php  }  ?>
 	</div>			
